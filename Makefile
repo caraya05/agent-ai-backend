@@ -1,5 +1,5 @@
 build:
-	docker-compose -f docker-compose-loc.yml build
+	docker-compose -f docker-compose-loc.yml build --no-cache
 
 up:
 	docker-compose -f docker-compose-loc.yml up

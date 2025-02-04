@@ -1,0 +1,2 @@
+from income_expenses.admin.sales_invoice_admin import SalesInvoiceAdmin
+from income_expenses.admin.purchase_invoice_collection_account_admin import PurchaseInvoiceCollectionAccountAdmin

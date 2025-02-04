@@ -42,6 +42,8 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     'configurations',
+    'companies',
+    'income_expenses',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -166,6 +168,8 @@ CORS_ALLOW_CREDENTIALS = True
 HIJACK_LOGIN_REDIRECT_URL = '/'  # Where admins are redirected to after hijacking a user
 # Where admins are redirected to after releasing a user
 HIJACK_LOGOUT_REDIRECT_URL = '/admin/auth/user/'
+AUTH_USER_MODEL = 'companies.Company'
+
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
