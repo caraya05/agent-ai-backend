@@ -6,6 +6,11 @@ services:
       - "5435:5432"
     volumes:
       - ./.postgres:/var/lib/postgresql/data
+      - ./certs:/var/lib/postgresql/certs
+    command: >
+      postgres -c ssl=on
+               -c ssl_cert_file=/var/lib/postgresql/certs/server.crt
+               -c ssl_key_file=/var/lib/postgresql/certs/server.key
 
   django:
     build: ./src
